@@ -6,7 +6,7 @@ const EmailInput = () => {
     }
 
     return (
-        <div className="flex flex-col items-center justify-center m-4">
+        <div className="flex flex-col items-center justify-center mx-4 mb-4">
             <input id="email-input" type="email" className="text-xl w-md my-2 py-4 px-6 rounded-2xl ring-1 ring-emerald-950 border border-emerald-100
     dark:bg-slate-800 dark:text-white dark:border-emerald-700
                                     placeholder:text-xl" placeholder="your-id@mail.com"/>
