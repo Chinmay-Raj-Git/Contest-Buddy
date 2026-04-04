@@ -2,13 +2,16 @@ const BASE_URL = "http://localhost:8080";
 
 export const apiRequest = async (endpoint, method = "GET", body = null) => {
 
-    const token = localStorage.getItem("token");
+    // const token = localStorage.getItem("token");
+    if(body && typeof body === "object"){
+        body = JSON.stringify(body);
+    }
 
     const options = {
         method,
         headers: {
             "Content-Type": "application/json",
-            ...(token && { Authorization: `Bearer ${token}` })
+            // ...(token && { Authorization: `Bearer ${token}` })
         },
         ...(body && { body })
     };
